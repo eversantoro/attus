@@ -1,0 +1,26 @@
+# Build
+target/
+frontend/node_modules/
+frontend/dist/
+
+# IDE
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.launch/
+
+# Cursor / agent
+agent-tools/
+
+# Logs / env / runtime
+*.log
+.env
+.env.local
+.run/*.pid
+!/.run/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
