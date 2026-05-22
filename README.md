@@ -6,13 +6,26 @@ O sistema permite cadastrar, listar, editar e excluir (soft delete) prazos vincu
 
 ---
 
+## Documentação do projeto
+
+| Documento | Conteúdo |
+|-----------|----------|
+| [README.md](README.md) | Visão geral, execução e referência rápida (este arquivo) |
+| [AMBIENTE.md](AMBIENTE.md) | Configuração do ambiente (JDK 21, Docker, Maven, scripts) |
+| [TESTES.md](TESTES.md) | Estratégia de testes, cenários cobertos e como executar |
+| [FUNCIONAMENTO_LOG.md](FUNCIONAMENTO_LOG.md) | Logs estruturados, correlation ID e níveis |
+| [TECHNICAL_NOTE.md](TECHNICAL_NOTE.md) | Decisões arquiteturais, trade-offs e melhorias futuras |
+| [INCIDENT_ANALYSIS.md](INCIDENT_ANALYSIS.md) | Análise de incidente — concorrência otimista (Parte 2 do desafio) |
+
+---
+
 ## Arquitetura
 
 | Camada | Tecnologia |
 |--------|------------|
 | Backend | Java 21, Spring Boot 3.3, Clean Architecture, JPA, Flyway, PostgreSQL |
 | Frontend | React 18, TypeScript, Vite, TailwindCSS, React Hook Form, Zod |
-| Testes | JUnit 5, Mockito, RestAssured, Testcontainers, Vitest, Testing Library |
+| Testes | JUnit 5, Mockito, RestAssured, Vitest, Testing Library |
 
 Pacote base Java: `ai.attus.prazos`
 
@@ -113,6 +126,8 @@ Acesse [http://localhost:5173](http://localhost:5173). O Vite faz proxy de `/api
 
 ## 4. Executar testes
 
+Ver [TESTES.md](TESTES.md).
+
 ### Backend (requer PostgreSQL via `docker compose up -d`)
 
 ```powershell
@@ -136,8 +151,13 @@ attus/
 ├── docker-compose.yml
 ├── pom.xml
 ├── README.md
-├── INCIDENT_ANALYSIS.md
+├── AMBIENTE.md
+├── TESTES.md
+├── FUNCIONAMENTO_LOG.md
 ├── TECHNICAL_NOTE.md
+├── INCIDENT_ANALYSIS.md
+├── config/          # ambiente.ps1
+├── scripts/         # iniciar, parar, testes, dados-exemplo
 ├── src/main/java/ai/attus/prazos/
 │   ├── dominio/
 │   ├── aplicacao/
@@ -149,6 +169,8 @@ attus/
 ---
 
 ## Logs e diagnóstico
+
+Ver [FUNCIONAMENTO_LOG.md](FUNCIONAMENTO_LOG.md).
 
 - Logs estruturados (JSON) via Logback + Logstash encoder
 - `correlationId` propagado no cabeçalho `X-Correlation-Id` e no MDC

@@ -1,6 +1,6 @@
 # Guia de Ambiente — Attus
 
-## Status atual (configurado)
+## Configuração
 
 | Serviço | URL | Status |
 |---------|-----|--------|
@@ -23,11 +23,11 @@ O arquivo `config/ambiente.ps1` define:
 . .\config\ambiente.ps1
 ```
 
-## Eclipse / Cursor
+## Eclipse/ VS Code
 
 - **Java 21** configurado em `.classpath`, `.settings/org.eclipse.jdt.core.prefs`
 - **Launch:** `.launch/GerenciadorPrazos.launch`
-- **VS Code/Cursor:** `.vscode/settings.json` aponta para JDK 21
+- **VS Code:** `.vscode/settings.json` aponta para JDK 21
 
 No Eclipse: *Project → Properties → Java Compiler → 21* e *Maven → Update Project*.
 

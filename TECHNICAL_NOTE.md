@@ -60,4 +60,4 @@ Erros padronizados com `title`, `detail`, `type` e `correlationId` melhoram inte
 
 ## Nomenclatura
 
-Classes, pacotes e mensagens de negócio em **português** (`PrazoProcessual`, `ManipuladorExcecaoGlobal`, `CriarPrazoCasoUso`), pacote raiz `ai.attus`, conforme solicitado.
+Classes, pacotes e mensagens de negócio em **português** (`PrazoProcessual`, `ManipuladorExcecaoGlobal`, `CriarPrazoCasoUso`), pacote raiz `ai.attus`.
