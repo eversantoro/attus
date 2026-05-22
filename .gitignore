@@ -10,9 +10,7 @@ frontend/dist/
 .project
 .settings/
 .launch/
-
-# Cursor / agent
-agent-tools/
+.cursor/
 
 # Logs / env / runtime
 *.log
